@@ -1,15 +1,3 @@
-/***************************************************************
- *                                                             *
- * file: main.cpp                                                *
- *                                                             *
- * @Author  Antonios Peris                         		   	   *
- * @Version 20-10-2020                             			   *
- * @email   csdp1196@csd.uoc.gr                                *
- *                                                             *
- * @brief   Main function for the needs of cs-240 project 2020 *
- *                                                             *
- ***************************************************************
- */
 using namespace std;
 #include <stdio.h>
 #include <stdlib.h>
