@@ -24,3 +24,7 @@ This phase consists of the following data structures which are used to store var
 
 
 #### For a detailed explanation of the project, how to compile and run it, see the "phaseB_instructions.pdf" file, owned by the instructor of the HY-240 Data Structures class Panagiota Fatourou (<a href="https://www.csd.uoc.gr/~hy240/current/index.php">Course website</a>).
+
+
+### Improtant Note
+The provided pdfs are property of Panagiota Fatourou and the UOC.
