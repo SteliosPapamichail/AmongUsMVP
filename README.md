@@ -9,3 +9,5 @@ This phase consists of the following data structures which are used to store var
 
 <li> Doubly Linked List with sentinel (used for storing Players) </li>
 <li> Sorted linked list (used for storing player tasks) </li>
+
+### For a detailed explanation of the project, how to compile and run it, see the "phaseA_instructions.pdf" file.
