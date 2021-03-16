@@ -1,7 +1,7 @@
 # AmongUsMVP
 A command line "Among Us" MVP built as a Project for the HY-240 Course on Data Structures of the University of Crete , Department of computer science.
 
-This project consists of two Phases ("Phase A" & "Phase B"). The first one is an implementation of the functionalities described below and its purpose is to demonstrate my knowledge and experimentation in creating some of the basic data structures in C++ from scratch. More specifically:
+This project consists of two Phases ("Phase A" & "Phase B"). Its purpose is to demonstrate my knowledge and experimentation in creating some of the basic data structures in C++ from scratch. More specifically:
 
 ## Phase A
 
