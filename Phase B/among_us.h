@@ -59,29 +59,94 @@ struct HT_Task
 struct General_Tasks_HT
 {
     int count;                      /*Count of tasks*/
-    struct Tasks **tasks;           /*General tasks hash table*/
+    struct HT_Task **tasks;         /*General tasks hash table*/
 };
 
 struct Completed_Tasks_PQ
 {
     int size;                       /*Count of completed tasks*/
-    struct HT_Task tasks[];         /*Completed tasks priority queue*/
+    struct HT_Task* tasks;         /*Completed tasks priority queue*/
 };
 
 unsigned int max_tasks_g; /* Max number of tasks */
 unsigned int max_tid_g;   /* Max task tid */
 
 /* Primes for your universal hashing implementation */
-extern unsigned int primes_g[100];
+extern unsigned int primes_g[650];
+
+/* Integer variables used to create a set of hash functions using global hashing at the beginning of the program */
+extern unsigned int p;
+extern unsigned int a;
+extern unsigned int b;
 
 /* Global variable, pointer to the head of the players tree */
 struct Player *players_tree;
 
+/* Global variable, pointer to the sentinel of the players tree */
+struct Player* players_sentinel;
+
 /* Global variable, pointer to the head of the tasks tree */
-struct General_Tasks_HT general_tasks_ht;
+struct General_Tasks_HT* general_tasks_ht;
 
 /* Global variable, pointer to the top of the completed task's priority queue */
-struct Completed_Tasks_PQ completed_tasks_pq;
+struct Completed_Tasks_PQ* completed_tasks_pq;
+
+/* Beginning of function declarations by Stelios Papamichail csd4020 */
+
+// Player BST declarations
+Player* dlBSTInsert(int pid, int is_alien, int evidence);
+Player* dlBSTDelete(int pid);
+Player* dlBSTGuardLookUp(int pid);
+void printDLBSTInOrder(Player* node);
+Player* FindInorderSuccessor(Player* node);
+Player* FindInorderPredecessor(Player* node);
+Player* bstFindMin();
+Player* bstFindMax();
+
+// Player Task BST declarations
+Task* playerTaskInsert(Task* root, int tid, int difficulty);
+Task* playerTaskDelete(Task* root, int tid);
+Task* playerTaskLookUp(Task* root, int tid);
+void printPlayerTasks(Task* root);
+Task* playerTaskSuccessor(Task* root, Task* node);
+Task* playerTaskPredecessor(Task* root, Task* node);
+Task* playerGetParentTask(Task* root, Task* child);
+void updateParentPathLcCount(Task* root, Task* node, bool insertedNode);
+
+// Task HashTable declarations
+HT_Task* hashInsert(int tid, int difficulty);
+HT_Task* hashLookUp(int tid);
+HT_Task* hashDelete(int tid);
+int h(int key);
+int findPrime();
+HT_Task* getParentHTTask(int tid);
+void printHT();
+
+// Completed Task Priority Queue declarations
+int pqInsert(int tid, int difficulty);
+bool isEmptyPQ();
+void pqDeleteMax();
+void heapify();
+HT_Task pqFindMax();
+void printPQ();
+
+// Event helper functions
+extern int htRow;
+void updateChainIfNeeded();
+void distributeTasks(Player* player);
+void printPlayerAndTasks(Player* node);
+Task* sortedListTaskInsert(Task* list, Task* task);
+Task* treeToSortedList(Task* node, Task* list);
+Task* mergeSortedTaskLists(Task* head1, Task* head2);
+Task* sortedListToBST(Task* tree);
+int updateBSTLCnt(Task* node);
+void printPlayerAndTasksWithEvidence(Player* node);
+int eject(int pid_1, int pid_2);
+int countCrewmatesOrAliens(Player* node, int cnt, int cntAliens);
+void printPlayerEventX(Player* node);
+Player* findMostEvidencePlayer(Player* node, Player* maxPlayer);
+
+/* End of function declarations by Stelios Papamichail csd4020 */
 
 /**
  * @brief Optional function to initialize data structures that 
@@ -206,7 +271,7 @@ int give_work(int pid_1, int pid_2);
  * @return 1 on success
  *         0 on failure
  */
-int terminate();
+int Terminate();
 
 /**
  * @brief Print Players
