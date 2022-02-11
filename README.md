@@ -10,7 +10,7 @@ This phase consists of the following data structures which are used to store var
 <li> Doubly Linked List with sentinel (used for storing Players) </li>
 <li> Sorted linked list (used for storing player tasks) </li>
 
-#### For a detailed explanation of the project, how to compile and run it, see the "phaseA_instructions.pdf" file, owned by the instructor of the HY-240 Data Structures class Panagiota Fatourou (<a href="https://www.csd.uoc.gr/~hy240/current/index.php">Course website</a>).
+For a detailed explanation of the project, how to compile and run it, see the [Instructions](Phase%20A/phaseA_instructions.pdf) file for phase A, owned by the instructor of the HY-240 Data Structures class Panagiota Fatourou (<a href="https://www.csd.uoc.gr/~hy240/current/index.php">Course website</a>).
 
 
 ## Phase B
@@ -23,7 +23,7 @@ This phase consists of the following data structures which are used to store var
 <li> Max priority queue (stores completed tasks) </li>
 
 
-#### For a detailed explanation of the project, how to compile and run it, see the "phaseB_instructions.pdf" file, owned by the instructor of the HY-240 Data Structures class Panagiota Fatourou (<a href="https://www.csd.uoc.gr/~hy240/current/index.php">Course website</a>).
+For a detailed explanation of the project, how to compile and run it, see the [Instructions](Phase%20B/phaseB_instructions.pdf) file for phase B, owned by the instructor of the HY-240 Data Structures class Panagiota Fatourou (<a href="https://www.csd.uoc.gr/~hy240/current/index.php">Course website</a>).
 
 
 ### Improtant Note
